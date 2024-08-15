@@ -7,7 +7,7 @@ A little bash terminal, H.F.A.
 - |
   |-2-> apt ( or pkg ) install git -y
   - |
-    |-3-> git clone
+    |-3-> git clone https://github.com/ScriptsXorgs/CyakTi.git
     - |
       |-4-> chmod +x install.sh
       - |
