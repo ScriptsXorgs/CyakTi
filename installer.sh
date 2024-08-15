@@ -25,6 +25,7 @@ def_Downloading() {
     git clone https://github.com/ScriptsXorgs/ProjectXSource.git
     cd ProjectXSource
     mv 'Project X' $HOME
+    cd ..
     rmdir ProjectXSource
 
 }
