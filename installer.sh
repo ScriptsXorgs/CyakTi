@@ -24,7 +24,7 @@ def_Downloading() {
    cd $HOME 
     git clone https://github.com/ScriptsXorgs/ProjectXSource.git
     cd ProjectXSource
-    mv 'Project X' $HOME
+    mv '.Project X' $HOME
     cd ..
     rmdir ProjectXSource
 
@@ -34,15 +34,15 @@ def_dwAnim && def_Downloading
 
 def_Configuring() {
 
-   cd $HOME && touch CTi.sh > /dev/null 2>&1
-     sleep 0.5 && chmod +x CTi.sh
-   echo "cd $HOME" >> CTi.sh
-   echo "cd 'Project X'" >> CTi.sh
-   echo "bash Main_Login.sh" >> CTi.sh
+   cd $HOME && touch prx.sh > /dev/null 2>&1
+     sleep 0.5 && chmod +x prx.sh
+   echo "cd $HOME" >> prx.sh
+   echo "cd '.Project X'" >> prx.sh
+   echo "bash Main_Login.sh" >> prx.sh
 
     # configure priv
    
-   cd ~ && cd 'Project X'
-    chmod 100 Main_Login.sh
+   cd ~ && cd '.Project X'
+    chmod 001 Main_Login.sh
 
 }
