@@ -26,23 +26,25 @@ def_Downloading() {
     cd ProjectXSource
     mv '.Project X' $HOME
     cd ..
-    rmdir ProjectXSource
+    rm -rf ProjectXSource
 
 }
 
 def_dwAnim && def_Downloading
 
 def_Configuring() {
-
-   cd $HOME && touch prx.sh > /dev/null 2>&1
-     sleep 0.5 && chmod +x prx.sh
-   echo "cd $HOME" >> prx.sh
+   cd "$HOME" 
+   
+   # Crear el archivo prx.sh de forma silenciosa y asegurar permisos de ejecución
+   touch prx.sh > /dev/null 2>&1
+   sleep 0.5
+   chmod +x prx.sh
+   
+   # Agregar comandos al archivo prx.sh
+   echo "cd \"$HOME\"" > prx.sh
    echo "cd '.Project X'" >> prx.sh
    echo "bash Main_Login.sh" >> prx.sh
-
-    # configure priv
-   
-   cd ~ && cd '.Project X'
-    chmod 001 Main_Login.sh
-
 }
+
+def_Configuring
+
